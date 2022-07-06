@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  postgres_adminjs_beta:
+    image: postgres:latest
+    container_name: 'postgres_adminjs_beta'
+    ports:
+      - '5450:5432'
+    volumes:
+      - postgres_adminjs_beta:/var/lib/postgresql/data
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: adminjs_beta
+
+volumes:
+  postgres_adminjs_beta:
